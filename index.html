@@ -5,11 +5,112 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
-    <div id="app">
-      <h1>TypeScript Sandbox</h1>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
+    <header>
+      <nav>
+        <div class="menu-toggle">
+          <img src="src/shared/icons/icon-menu-burguer.svg" alt="Menu" />
+        </div>
+        <ul>
+          <li><a href="#">Moda Mujer</a></li>
+          <li><a href="#">Moda Hombre</a></li>
+          <li><a href="#">Nueva Colección</a></li>
+          <li><a href="#">Colecciones Especiales</a></li>
+        </ul>
+        <div class="icons">
+          <img src="src/shared/icons/icon-user.svg" alt="User" />
+          <img src="src/shared/icons/icon-heart.svg" alt="Heart" />
+          <img src="src/shared/icons/icon-shopping-cart.svg" alt="Shpoping" />
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1>Nuevas Colecciones</h1>
+      <div class="product-grid">
+        <div class="product">
+          <img src="src/shared/img/image-3.jpg" alt="Vestido" />
+          <div class="info">
+            <p>Vestido</p>
+            <p class="price">34.99 €</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="src/shared/img/image-6.jpg" alt="Camisa" />
+          <div class="info">
+            <p>Camisa</p>
+            <p class="price">44.99 €</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="src/shared/img/image-4.jpg" alt="Vaqueros" />
+          <div class="info">
+            <p>Vaqueros</p>
+            <p class="price">79.99 €</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="src/shared/img/image-5.jpg" alt="Polo" />
+          <div class="info">
+            <p>Polo</p>
+            <p class="price">44.95 €</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="src/shared/img/image-1.jpg" alt="Camisa" />
+          <div class="info">
+            <p>Camisa</p>
+            <p class="price">25.00 €</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="src/shared/img/image-2.jpg" alt="Camiseta" />
+          <div class="info">
+            <p>Camiseta</p>
+            <p class="price">22.99 €</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-item">
+          <div class="icon-circle">
+            <img src="src/shared/icons/icon-truck.svg" alt="Truck" />
+          </div>
+          <p>Entrega</p>
+        </div>
+        <div class="footer-item">
+          <p>Devoluciones y cambios</p>
+        </div>
+        <div class="footer-item">
+          <div class="icon-circle">
+            <img src="src/shared/icons/icon-phone.svg" alt="Phone" />
+          </div>
+          <p>+375 (29) 749-18-23</p>
+        </div>
+        <div class="footer-item">
+          <div class="icon-circle">
+            <img src="src/shared/icons/icon-mail.svg" alt="Mail" />
+          </div>
+          <p>shop@omix.com</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.querySelector(".menu-toggle").addEventListener("click", () => {
+        document.querySelector("nav ul").classList.toggle("showing");
+        document.querySelector("nav .icons").classList.toggle("showing");
+      });
+    </script>
   </body>
 </html>
